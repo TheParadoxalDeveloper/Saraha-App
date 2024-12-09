@@ -26,9 +26,9 @@ const port = process.env.PORT || 3980
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// app.use("/public", express.static("public")); /*For Development */
-app.set("views", path.resolve() + "/views")/*For Vercel Production */
-app.use(express.static(path.join(path.resolve(), "public"))); /*For Vercel Production */
+app.use("/public", express.static("public")); /*For Development */
+// app.set("views", path.resolve() + "/views")/*For Vercel Production */
+// app.use(express.static(path.join(path.resolve(), "public"))); /*For Vercel Production */
 
 app.use(session({
     secret: 'keyboardOn',
