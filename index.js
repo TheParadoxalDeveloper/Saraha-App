@@ -1,3 +1,6 @@
+process.on('uncaughtException', (error) => {
+    console.error('Caught exception:', error);
+})
 import express from 'express'
 import { dbConnection } from "./database/dbConnection.js";
 import homeRouter from './src/modules/home/home.routes.js';
@@ -47,4 +50,7 @@ app.use('*', (req, res) => {
     res.render("error.ejs", { session: null })
 })
 
+process.on('unhandledRejection', (error) => {
+    console.error('Caught rejection:', error);
+})
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
