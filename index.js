@@ -14,16 +14,18 @@ let MongoDBStore = mongoSession(session)
 
 
 var store = new MongoDBStore({
-    uri: 'mongodb://127.0.0.1:27017/mvc_sarahaApp',
+    uri: 'mongodb+srv://paradoxaldev:paradox@paradoxal-activity.41jqk.mongodb.net/mvc_sarahaApp',
     collection: 'mySessions'
 });
 
 const app = express()
 const port = process.env.PORT || 3980
 app.use(express.json());
-app.set('views', path.resolve() + "/views")
-app.use(express.urlencoded({ extended: true })); /*3shan el undefined bta3t el data ely f el req.body */
-app.use(express.static(path.join(path.resolve(), "public"))); /*3shan el files ely f el /public zy el js w el css */
+app.use(express.urlencoded({ extended: true }));
+
+// app.use("/public", express.static("public")); /*For Development */
+app.set("views", path.resolve() + "/views")/*For Vercel Production */
+app.use(express.static(path.join(path.resolve(), "public"))); /*For Vercel Production */
 
 app.use(session({
     secret: 'keyboardOn',
