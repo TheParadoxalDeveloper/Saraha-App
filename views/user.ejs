@@ -1,0 +1,67 @@
+
+    <!-- <nav class="navbar navbar-expand-lg bg-custom navbar-dark bg-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="/public/img/logo300.png" width="54" alt=""> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto d-none">
+
+                    <li class="nav-item mx-2">
+                        <a class="btn px-3 btn-outline-light nav-btn-outline nav-link"
+                            href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn px-3 btn-outline-light nav-btn-outline nav-link" href="/login">Login</a>
+                    </li>
+                </ul>
+
+
+
+
+                <ul class="navbar-nav ml-auto ">
+
+                    <li class="nav-item mr-2">
+                        <a class="btn px-3 btn-outline-light nav-btn-outline nav-link" href="/messages">Messages</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="btn px-3 btn-outline-light nav-btn-outline nav-link" href="">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn px-3 btn-outline-light nav-btn-outline nav-link" href="/">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+   
+    <%- include('./shared/header.ejs') %>
+
+    <div class="container text-center py-5 my-5 text-center">
+        <div class="card card-color py-5 mb-5">
+            <a href="" data-toggle="modal" data-target="#profile">
+                <img src="/public/img/avatar.png" class="avatar " alt="">
+
+            </a>
+            <h3 class="py-2 text-white"><%= checkUser.name %></h3>
+            <div class="container w-50 m-auto">
+                <form action="/sendMessage/<%= userId %>" method="post">
+                    <textarea class="form-control " name="content" id="" cols="10" rows="9"
+                        placeholder="You cannot send a Sarahah to yourself, share your profile with your friends"></textarea>
+                    <button class="btn text-dark nav-btn-outline mt-3"><i class="far fa-paper-plane"></i> Send</button>
+                </form>
+            </div>
+        </div>
+    
+
+    </div>
+
+
+
+
+
+
+    <%- include('./shared/footer.ejs') %>

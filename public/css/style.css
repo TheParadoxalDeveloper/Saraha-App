@@ -1,0 +1,59 @@
+body {
+    background-color: #141111;
+}
+
+.bg-custom {
+    background-color: #7c10bb !important;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.btn-default-outline {
+    color: #7c10bb !important;
+    background-color: transparent;
+    border-color: #7c10bb;
+    width: 200px;
+}
+
+.nav-btn-outline:hover{
+    color: #7c10bb !important;
+
+}
+
+.btn-default-outline:hover {
+    color: #fff !important;
+    background-color: #7c10bb;
+    box-shadow: none;
+}
+
+.forgot:hover {
+    color: #7c10bb !important;
+}
+
+.login {
+    color: #7c10bb;
+}
+
+.user-icon {
+    font-size: 60px;
+    color: #C0C0C0;
+}
+
+.avatar {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+}
+
+.card-color{
+    background-color: #7c10bb;
+}
+
+.share {
+    margin: 0px auto 10px auto;
+}
